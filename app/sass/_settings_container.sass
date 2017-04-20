@@ -1,0 +1,11 @@
+@import "_container.sass"
+
+@mixin add-settings-container
+    .container.settings
+        +add-container
+        .record
+            +add-container-record
+        .back
+            text-align: right
+            &:hover
+                background: $menu-hover-background-color

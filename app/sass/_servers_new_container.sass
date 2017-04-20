@@ -1,0 +1,22 @@
+@import "_container.sass"
+
+@mixin add-servers-new-container
+    .container.servers-new
+        +add-container
+        z-index: 2
+        .record
+            +add-container-record
+        .back
+            text-align: right
+            &:hover
+                background: $menu-hover-background-color
+        label
+            cursor: pointer
+        input[type=text]
+            width: 200px
+            float: right
+            text-align: center
+        input[type=submit]
+            +add-button
+        .record.submit
+            text-align: right

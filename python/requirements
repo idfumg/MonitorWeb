@@ -1,0 +1,20 @@
+python:
+tornado
+aiopg
+sqlalchemy
+
+linux:
+libpq-dev
+postgresql
+
+
+sudo -u postgres psql
+CREATE DATABASE logmonitor_db;
+CREATE USER idfumg WITH password 'qwerty';
+alter user idfumg password 'qwerty';
+GRANT ALL privileges ON DATABASE logmonitor_db TO idfumg;
+\q
+
+\connect logmonitor_db
+\l
+\dt

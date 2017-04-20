@@ -1,0 +1,44 @@
+@import "_container.sass"
+
+@mixin add-servers-container
+    .container.servers
+        +add-container
+        .record
+            +add-container-record
+        .back
+            text-align: right
+            &:hover
+                background: $menu-hover-background-color
+        .new
+            i
+                margin-right: em(15)
+            &:hover
+                background: $menu-hover-background-color
+
+        .servers-records
+            list-style-type: none
+            margin: 0
+            padding: 0
+            .server
+                &.active
+                    a:nth-child(2)
+                        color: $active-color
+                .link
+                    padding: em(10) em(15)
+                .name
+                    padding: em(10) em(0)
+                    width: 56%
+                .remove
+                    padding: em(10) em(15)
+                .settings
+                    padding: em(10) em(15)
+                .event
+                    padding: em(10) em(15)
+                    &.active
+                        color: $accent-color
+                a
+                    text-decoration: none
+                    color: $menu-icon-color
+                    display: inline-block
+                    &:hover
+                        background: $menu-hover-background-color

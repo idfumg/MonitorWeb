@@ -1,0 +1,33 @@
+@mixin add-main-window
+    .main-window
+        +fill-parent
+        position: absolute
+        left: em(0)
+        font-size: em(13)
+        //transition: 0.5s
+        //overflow-x: hidden
+        //overflow-y: hidden
+        margin-top: em(10)
+        color: #000
+        padding-left: 5px
+        height: 90vh
+        display: block
+        z-index: 0
+        p
+            display: inline-block
+            margin: 0
+            width: 100%
+            word-break: break-all
+            line-height: em(20)
+            .fold
+                color: $accent-color
+
+    //.active-container
+        & ~ .main-window
+            +span-columns(8.9)
+            left: em(380)
+
+.ps-scrollbar-y
+    background-color: $menu-font-color !important
+.ps-scrollbar-y-rail:hover
+    background-color: $menu-background-color !important

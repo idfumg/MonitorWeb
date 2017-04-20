@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Logs monitor</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/libs.min.css" />
+    <link rel="stylesheet" href="css/common.css" />
+</head>
+<body>
+    <div class="loader"><div class="spinner"></div></div>
+    <nav class="menu">
+        <ul class="main-menu">
+            <li><a href="#" class="button servers"><i class="fa fa-cloud"></i>servers</a></li>
+        </ul>
+        <div class="search-menu">
+            <div class="search-fields">
+                <input type="text" class="search-text" />
+            </div>
+            <a href="#"><i class="fa fa-search main-menu-button search-button"></i></a>
+            <a href="#"><i class="fa fa-calendar main-menu-button calendar-button"></i></a>
+            <a href="#"><i class="fa fa-globe main-menu-button connect-button"></i></a>
+        </div>
+    </nav>
+    <section class="containers">
+        <section class="container datetime right">
+            <a href="#" class="record back"><i class="fa fa-arrow-left"></i></a>
+            <div id="datetimerange-container"></div>
+            <div class="record buttons">
+                <input class="discard" type="button" value="discard">
+            </div>
+        </section>
+        <section class="container servers-new">
+            <a href="#" class="record back"><i class="fa fa-arrow-left"></i></a>
+            <form class="" action="javascript:void(0)" method="">
+                <div class="record">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" value="">
+                </div>
+                <div class="record">
+                    <label for="address">Address:</label>
+                    <input type="text" name="name" id="address" value="">
+                </div>
+                <div class="record">
+                    <label for="port">Port:</label>
+                    <input type="text" name="name" id="port" value="">
+                </div>
+                <div class="record submit">
+                     <input type="submit" value="save">
+                </div>
+                <span id="id"></span>
+            </form>
+        </section>
+        <section class="container events">
+            <a href="#" class="record back"><i class="fa fa-arrow-left"></i></a>
+            <a href="#" class="record new"><i class="fa fa-plus"></i>new event</a>
+            <ul class="events-records">
+                <li class="event hidden"><input type="text" name="text" class="text" value=""><a href="#" class="show"><i class="fa fa-eye"></i></a><a href="#" class="remove"><i class="fa fa-times"></i></a><span class="id hidden">test</span></li>
+            </ul>
+        </section>
+        <section class="container servers">
+            <a href="#" class="record back"><i class="fa fa-arrow-left"></i></a>
+            <a href="#" class="record new"><i class="fa fa-plus"></i>new server</a>
+            <ul class="servers-records">
+                <li class="server hidden"><a href="#" class="link"><i class="fa fa-chain"></i></a><a href="#" class="name">Some server</a><a href="#" class="event"><i class="fa fa-bell"></i></a><a href="#" class="settings"><i class="fa fa-pencil-square-o"></i></a><a href="#" class="remove"><i class="fa fa-times"></i></a><span class="address hidden">192.168.1.2</span><span class="port hidden">9090</span><span class="id hidden">1</span></li>
+            </ul>
+        </section>
+
+        <div class="main-window" id="scrollbar1">
+            <!-- <p><span class="fold">[+]</span>[01.01.2016-00:00:01] HTTPSRV МОВАПУ Warning! Unexpected behaviour!</p> -->
+        </div>
+    </section>
+
+    <link rel="stylesheet" href="libs/jquery-date-range-picker/dist/daterangepicker.min.css" />
+
+    <script src="js/libs.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/ws.js"></script>
+    <script src="js/search_fields.js"></script>
+    <script src="js/servers.js"></script>
+    <script src="js/main_window.js"></script>
+    <script src="js/common.js"></script>
+    <script src="libs/moment/min/moment.min.js"></script>
+    <script src="libs/jquery-date-range-picker/dist/jquery.daterangepicker.min.js"></script>
+</body>
+</html>

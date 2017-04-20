@@ -1,0 +1,65 @@
+$visual-grid: true
+$grid-columns: 12
+$max-width: 100%
+$gutter: 0.00000001em
+
+@import "bourbon"
+@import "neat"
+@import "../libs/font-awesome/css/font-awesome.css"
+@import "_vars.sass"
+@import "_button.sass"
+@import "_settings_container.sass"
+@import "_logs_container.sass"
+@import "_servers_container.sass"
+@import "_events_container.sass"
+@import "_main_window.sass"
+@import "_menu.sass"
+@import "_servers_new_container.sass"
+@import "_loader.sass"
+@import "_datetime_container.sass"
+
+html, body
+    height: 100%
+
+body
+    font-family: "OpenSansRegular", sans-serif
+    font-size: 16px
+    line-height: 1.6
+    position: relative
+    min-width: 320px
+    overflow-x: hidden
+    overflow-y: hidden
+    height: 100vh
+    color: $menu-font-color
+    background: $logs-area-background-color
+    input[type="text"]
+        border: 0
+        border-radius: 3px
+        padding: em(3)
+
+li
+    font-size: em(16)
+
+.fa
+    font-size: em(18)
+
+a
+    outline: none
+
+.hidden
+    display: none
+
++add-loader
++add-menu
+
+.containers
+    +outer-container
+    //+add-settings-container
+    //+add-logs-container
+    +add-servers-new-container
+    +add-servers-container
+    +add-events-container
+    +add-datetime-container
+    position: relative
+
++add-main-window

@@ -1,0 +1,60 @@
+@mixin add-menu
+    .menu
+        +outer-container
+        background: $menu-background-color
+        box-shadow: 1px 1px 2px black
+
+    .main-menu
+        +span-columns(6)
+        margin: 0
+        padding: 0
+        list-style-type: none
+
+        li
+            float: left
+            width: 120px
+            background-image: url('../img/border.png')
+            background-position: right
+            background-repeat: repeat-y
+            a
+                text-decoration: none
+                color: $menu-font-color
+                padding: em(10) em(0)
+                display: block
+                text-align: center
+                &.active
+                    background: $menu-hover-background-color
+            &:hover
+                background: $menu-hover-background-color
+            .fa
+                color: $menu-icon-color
+                margin-right: em(5)
+
+    +direction-context(right-to-left)
+        .search-menu
+            +span-columns(6)
+            text-align: right
+            .search-fields
+                display: inline-block
+                &.active
+                    & > .search-text
+                        width: em(300)
+                        padding: em(3)
+                .search-text
+                    width: 0
+                    border: none
+                    padding: 0
+                    border-radius: 3px
+                    transition: 0.3s
+
+.main-menu-button
+    display: inline-block
+    text-decoration: none
+    color: $menu-icon-color
+    padding: em(12) em(15) em(12) em(15)
+    &:hover
+        background: $menu-hover-background-color
+    &.calendar-button, &.search-button, &.connect-button
+        color: $menu-icon-color
+        &.setted, &.connected
+            color: $active-color

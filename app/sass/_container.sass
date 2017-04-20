@@ -1,0 +1,17 @@
+@import "_container_record.sass"
+
+@mixin add-container
+    +span-columns(3)
+    z-index: 1
+    position: absolute
+    background: $menu-background-color
+    transition: 0.5s
+    left: em(-500)
+    background-image: url('../img/border-up.png')
+    background-position: top
+    background-repeat: repeat-x
+    box-shadow: 1px 1px 2px black
+    border-radius: 2px
+    width: 440px
+    &.active-container
+        left: em(0)
